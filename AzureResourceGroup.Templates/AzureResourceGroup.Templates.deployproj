@@ -23,12 +23,20 @@
   <Import Condition=" Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Deployment\1.1\DeploymentProject.targets') " Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Deployment\1.1\DeploymentProject.targets" />
   <!-- vertag<:>end -->
   <ItemGroup>
+    <None Include="azuredeploy.json" />
+    <None Include="azuredeploy.parameters.json" />
     <None Include="Deployment.targets">
       <Visible>False</Visible>
     </None>
     <Content Include="Deploy-AzureResourceGroup.ps1" />
     <Content Include="WebSiteSQLDatabase.json" />
     <Content Include="WebSiteSQLDatabase.parameters.json" />
+    <None Include="StorageCDN.json" />
+    <None Include="StorageCDN.parameters.json" />
+    <None Include="WebSite.json" />
+    <None Include="WebSite.parameters.json" />
+    <None Include="WebSiteCDN.json" />
+    <None Include="WebSiteCDN.parameters.json" />
   </ItemGroup>
   <Target Name="GetReferenceAssemblyPaths" />
 </Project>
